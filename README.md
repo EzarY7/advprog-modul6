@@ -12,3 +12,6 @@ handle_connection first creates a buffered reader to read the lines from the TCP
 <h3>Commit 3 Reflection</h3>
 <img src="images/commit3.jpg">
 This version of the handle_connection method adds an if else statement that determines the http response based on the request line. If the request is for the root path, it responds with hello.html. Otherwise, it responds with 404.html. It then creates the http response and writes it back to the TCP stream.
+
+<h3>Commit 4 Reflection</h3>
+This version of the handle_connection method replaces the if else statement with a match statement. It handles a new case, namely the /sleep endpoint. When the endpoint is accessed, the server introduces a 5 second delay before responding. This delay allows developers to test how the server handles slow responses. This is useful for performance testing purposes.
